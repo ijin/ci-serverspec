@@ -1,0 +1,16 @@
+version: 0.1
+
+phases:
+  install:
+    commands:
+      - echo install started on `date`
+      - sudo apt-get update
+      - pwd
+      - gem list
+      - gem install bundler
+  build:
+    commands:
+      - echo Build started on `date`
+  post_build:
+    commands:
+      - echo Build completed on `date`
