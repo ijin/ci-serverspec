@@ -4,13 +4,13 @@ phases:
   install:
     commands:
       - echo install started on `date`
-      - sudo apt-get update
       - pwd
       - gem list
-      - gem install bundler
+      - bundle install
   build:
     commands:
       - echo Build started on `date`
+      - bundle exec rspec
   post_build:
     commands:
       - echo Build completed on `date`
